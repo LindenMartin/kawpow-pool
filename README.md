@@ -4,24 +4,24 @@ Highly Efficient mining pool for Coins based on KawPoW algo!
 -------
 ### Screenshots
 #### Home<br />
-![Home](https://raw.githubusercontent.com/Satoex/kawpow-pool/master/docs/frontend/home.png)
+![Home](https://raw.githubusercontent.com/LindenMartin/kawpow-pool/master/docs/frontend/home.png)
 
 #### Pool Stats<br />
-![Pool Stats](https://raw.githubusercontent.com/Satoex/kawpow-pool/master/docs/frontend/poolstats.png)<br /><br />
+![Pool Stats](https://raw.githubusercontent.com/LindenMartin/kawpow-pool/master/docs/frontend/poolstats.png)<br /><br />
 
 #### Miner Stats<br />
-![Miner Stats](https://raw.githubusercontent.com/Satoex/kawpow-pool/master/docs/frontend/minerstats.png)<br /><br />
+![Miner Stats](https://raw.githubusercontent.com/LindenMartin/kawpow-pool/master/docs/frontend/minerstats.png)<br /><br />
 
 #### Payments<br />
-![Payments](https://raw.githubusercontent.com/Satoex/kawpow-pool/master/docs/frontend/payments.png)<br /><br />
+![Payments](https://raw.githubusercontent.com/LindenMartin/kawpow-pool/master/docs/frontend/payments.png)<br /><br />
 
 -------
 ### Node Open Mining Portal consists of 3 main modules:
 | Project | Link |
 | ------------- | ------------- |
-| [KawPoWNOMP](https://github.com/Satoex/kawpow-pool) | https://github.com/Satoex/kawpow-pool|
-| [Stratum Pool](https://github.com/Satoex/kawpow-stratum-pool) | https://github.com/Satoex/kawpow-stratum-pool |
-| [Node Multihashing](https://github.com/Satoex/node-multi-hashing) | https://github.com/Satoex/node-multi-hashing |
+| [KawPoWNOMP](https://github.com/LindenMartin/kawpow-pool) | https://github.com/LindenMartin/kawpow-pool|
+| [Stratum Pool](https://github.com/LindenMartin/kawpow-stratum-pool) | https://github.com/LindenMartin/kawpow-stratum-pool |
+| [Node Multihashing](https://github.com/LindenMartin/node-multi-hashing) | https://github.com/LindenMartin/node-multi-hashing |
 
 -------
 ### Requirements
@@ -79,7 +79,7 @@ Other helpfull commands.
     sudo apt install git -y
     cd ~
     git config --global http.https://gopkg.in.followRedirects true
-    git clone https://github.com/Satoex/kawpow-pool.git
+    git clone https://github.com/LindenMartin/kawpow-pool.git
     cd kawpow-pool/
     ./install.sh
 
@@ -369,14 +369,5 @@ Change "address": "RNs3ne88DoNEnXFTqUrj6zrYejeQpcj4jk", to your pool created wal
     
     cd ~/nomp-kawpow-pool
     ./pool-start.sh
-
-### Donates for developers KawPoWNOMP
-
-
-BTC: 1GXEm97T5iXAeYHBj2GuL3TKKRpkNas4Qt
-
-LTC: LWBZWLmjqeQFnMqS9NctcdSx3TEYHyzfGz
-
-RVN: RNs3ne88DoNEnXFTqUrj6zrYejeQpcj4jk
     
 -------
