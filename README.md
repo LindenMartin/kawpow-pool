@@ -1,32 +1,18 @@
 # NOMP KawPoW Algorithm Pool
-Highly Efficient mining pool for Coins based on KawPoW algo!
-
--------
-### Screenshots
-#### Home<br />
-![Home](https://raw.githubusercontent.com/LindenMartin/kawpow-pool/master/docs/frontend/home.png)
-
-#### Pool Stats<br />
-![Pool Stats](https://raw.githubusercontent.com/LindenMartin/kawpow-pool/master/docs/frontend/poolstats.png)<br /><br />
-
-#### Miner Stats<br />
-![Miner Stats](https://raw.githubusercontent.com/LindenMartin/kawpow-pool/master/docs/frontend/minerstats.png)<br /><br />
-
-#### Payments<br />
-![Payments](https://raw.githubusercontent.com/LindenMartin/kawpow-pool/master/docs/frontend/payments.png)<br /><br />
+Mining pool for Kawpow algorithm.
 
 -------
 ### Node Open Mining Portal consists of 3 main modules:
 | Project | Link |
 | ------------- | ------------- |
-| [KawPoWNOMP](https://github.com/LindenMartin/kawpow-pool) | https://github.com/LindenMartin/kawpow-pool|
-| [Stratum Pool](https://github.com/LindenMartin/kawpow-stratum-pool) | https://github.com/LindenMartin/kawpow-stratum-pool |
-| [Node Multihashing](https://github.com/LindenMartin/node-multi-hashing) | https://github.com/LindenMartin/node-multi-hashing |
+| [Kawpow pool](https://github.com/LindenMartin/kawpow-pool) | https://github.com/LindenMartin/kawpow-pool|
+| [Kawpow Stratum Pool](https://github.com/LindenMartin/kawpow-stratum-pool) | https://github.com/LindenMartin/kawpow-stratum-pool |
+| [Node multi hashing](https://github.com/LindenMartin/node-multi-hashing) | https://github.com/LindenMartin/node-multi-hashing |
 
 -------
 ### Requirements
 ***NOTE:*** _These requirements will be installed in the install section!_<br />
-* Ubuntu Server 18.04.* LTS
+* Ubuntu Server 20.04.* LTS
 * Coin daemon
 * Node Version Manager
 * Node 8.1.4
@@ -41,11 +27,10 @@ Highly Efficient mining pool for Coins based on KawPoW algo!
     adduser pool
     usermod -aG sudo pool
     su - pool
-    sudo apt install wget
-    wget https://github.com/RavenProject/Ravencoin/releases/download/v4.3.1/raven-4.3.1.0-x86_64-linux-gnu.tar.gz
-    tar -xf raven-4.3.1.0-x86_64-linux-gnu.tar.gz
-    rm raven*gz
-    cd raven-4.3.1.0/bin
+    wget https://github.com/RavenProject/Ravencoin/releases/download/v4.3.2.1/raven-4.3.2.1-x86_64-linux-gnu.zip
+    unzip raven-4.3.2.1-x86_64-linux-gnu.zip
+    rm raven*zip
+    cd raven-4.3.2.1/bin
     mkdir -p ~/.raven/
     touch ~/.raven/raven.conf
     echo "rpcuser=user1" > ~/.raven/raven.conf
@@ -55,7 +40,7 @@ Highly Efficient mining pool for Coins based on KawPoW algo!
     ./ravend
     ./raven-cli getnewaddress
 
-Example output: RNs3ne88DoNEnXFTqUrj6zrYejeQpcj4jk - it is the address of your pool, you need to remember it and specify it in the configuration file pool_configs/ravencoin.json.
+Example output: RNxxxjk - it is the address of your pool, you need to remember it and specify it in the configuration file pool_configs/ravencoin.json.
     
     ./raven-cli getaddressesbyaccount ""
     
@@ -86,8 +71,6 @@ Other helpfull commands.
 -------
 ### Configure Pool
 
-Change "stratumHost": "192.168.0.200", to your IP or DNS in file config.json:
-
     cd ~/kawpow-pool
     nano config.json
 
@@ -116,9 +99,9 @@ Change "stratumHost": "192.168.0.200", to your IP or DNS in file config.json:
     "pagedesc": "A reliable, low fee, easy to use mining pool for KawPoW algorithm coins! Get started mining today!",
     "pagekeywds": "GPU,CPU,Hash,Hashrate,Cryptocurrency,Crypto,Mining,Pool,Ravencoin,Zelantus,Sato,Easy,Simple,How,To",
 
-    "btcdonations": "1GXEm97T5iXAeYHBj2GuL3TKKRpkNas4Qt",
-    "ltcdonations": "LWBZWLmjqeQFnMqS9NctcdSx3TEYHyzfGz",
-    "rvndonations": "RNs3ne88DoNEnXFTqUrj6zrYejeQpcj4jk",
+    "btcdonations": "BTCaddress",
+    "ltcdonations": "LTCaddress",
+    "rvndonations": "RVNaddress",
 
     "logger" : {
         "level" : "debug",
@@ -162,7 +145,7 @@ Change "stratumHost": "192.168.0.200", to your IP or DNS in file config.json:
         "sslport": 443,
         "sslkey": "/home/pool/nomp-kawpow-pool/certs/privkey.pem",
         "sslcert": "/home/pool/nomp-kawpow-pool/certs/fullchain.pem",
-        "stratumHost": "192.168.0.200",
+        "stratumHost": "127.0.0.1",
         "stats": {
             "updateInterval": 15,
             "historicalRetention": 28800,
@@ -244,7 +227,7 @@ Change "stratumHost": "192.168.0.200", to your IP or DNS in file config.json:
 
 ```
 
-Change "address": "RNs3ne88DoNEnXFTqUrj6zrYejeQpcj4jk", to your pool created wallet address in file ravencoin.json:
+Change "address": "RNxxxg", to your pool created wallet address in file ravencoin.json:
 
     cd ~/nomp-kawpow-pool/pool_configs
     nano ravencoin.json
@@ -254,12 +237,12 @@ Change "address": "RNs3ne88DoNEnXFTqUrj6zrYejeQpcj4jk", to your pool created wal
     "enabled": true,
     "coin": "ravencoin.json",
 
-    "address": "RNs3ne88DoNEnXFTqUrj6zrYejeQpcj4jk",
+    "address": "RNxxxg",
     
-    "donateaddress": "RNs3ne88DoNEnXFTqUrj6zrYejeQpcj4jk",
+    "donateaddress": "RNxxxg",
 
     "rewardRecipients": {
-        "RNs3ne88DoNEnXFTqUrj6zrYejeQpcj4jk": 0.5
+        "RNxxxg": 0.5
     },
 
     "paymentProcessing": {

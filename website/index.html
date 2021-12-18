@@ -8,7 +8,7 @@
 	{{ if ((it.portalConfig.pagedesc !== "undefined") & (it.portalConfig.pagedesc !== "")) { }}
 		<meta name="description" content="{{=it.portalConfig.pagedesc}}" />
 	{{ } else { }}
-		<meta name="description" content="An KawPoW algorithm mining pool - https://github.com/DirtyHarryDev/nomp-kawpow-pool" />    
+		<meta name="description" content="An KawPoW algorithm mining pool" />    
 	{{ } }}
 	<!-- Page Keywords -->
 	{{ if ((it.portalConfig.pagekeywds !== "undefined") & (it.portalConfig.pagekeywds !== "")) { }}
@@ -26,7 +26,7 @@
 	{{ if ((it.portalConfig.pagetitle !== "undefined") & (it.portalConfig.pagetitle !== "")) { }}
 		<title>{{=it.portalConfig.pagetitle}}</title>
 	{{ } else { }}
-		<title>KawPoW Mining Pool - https://github.com/DirtyHarryDev/nomp-kawpow-pool</title>
+		<title>KawPoW Mining Pool</title>
 	{{ } }}
 	<link rel="icon" type="image/png" href="/static/img/favicon.png" />
         <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' crossorigin="anonymous" />           
@@ -34,7 +34,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" crossorigin="anonymous" />
         <link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" />
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" crossorigin="anonymous" />
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.4.2/pure-min.css" crossorigin="anonymous" />
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/2.0.6/pure-min.css" crossorigin="anonymous" />
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
         <link rel="stylesheet" href="/static/css/adminlte.min.css">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -316,28 +316,18 @@ footer iframe {
 			<!-- BTC Donations -->
 			{{ if ((it.portalConfig.btcdonations !== "undefined") & (it.portalConfig.btcdonations !== "")) { }}
 				<span>BTC Donations: {{=it.portalConfig.btcdonations}}</span><br />
-			{{ } else { }}
-				<span>BTC Donations: 1GXEm97T5iXAeYHBj2GuL3TKKRpkNas4Qt</span><br />	    
 			{{ } }}
 			<!-- LTC Donations -->
 			{{ if ((it.portalConfig.ltcdonations !== "undefined") & (it.portalConfig.ltcdonations !== "")) { }}
 				<span>LTC Donations: {{=it.portalConfig.ltcdonations}}</span><br />
-			{{ } else { }}
-				<span>LTC Donations: LWBZWLmjqeQFnMqS9NctcdSx3TEYHyzfGz</span><br />
 			{{ } }}
 			<!-- RVN Donations -->
 			{{ if ((it.portalConfig.rvndonations !== "undefined") & (it.portalConfig.rvndonations !== "")) { }}
 				<span>RVN Donations: {{=it.portalConfig.rvndonations}}</span><br />
-			{{ } else { }}
-				<span>RVN Donations: RNs3ne88DoNEnXFTqUrj6zrYejeQpcj4jk</span><br />
 			{{ } }}
 			</div>
 			<br>
-			<span>Powered by <a href="https://github.com/DirtyHarryDev/nomp-kawpow-pool" >Dirty Harry KawPoW Pool</a></span>
-			<div id="communityFooter">
-				<iframe src="//ghbtns.com/github-btn.html?user=DirtyHarryDev&repo=nomp-kawpow-pool&type=watch&count=true"
-                            	allowtransparency="true" frameborder="0" scrolling="0" width="80" height="20"></iframe>
-			</div>
+			<span>Powered by <a href="https://github.com/LindenMartin/kawpow-pool" >Kawpow Pool</a></span>
 		</div>
 	</footer>
 </body>
